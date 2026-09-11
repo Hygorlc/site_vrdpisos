@@ -1,0 +1,10 @@
+{
+  "name": "vrd-pisos-industriais",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional privado da VRD Pisos Industriais",
+  "scripts": {
+    "dev": "node server.cjs",
+    "build": "node --check public/app.js && node build.cjs"
+  }
+}
