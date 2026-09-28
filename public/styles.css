@@ -5,3 +5,9 @@
 /* Galeria de fotos e vídeos das obras */
 .gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.gallery-card:last-child{display:block}.gallery-card video{width:100%;height:100%;object-fit:cover}.gallery-note{font-size:14px}.gallery-overlay small{font-size:12px}.gallery-overlay strong{font-size:15px}#gallery-image,#gallery-video{width:100%;height:100%;object-fit:contain;background:#101820}#gallery-image[hidden],#gallery-video[hidden]{display:none}.gallery-dialog-footer p{font-size:14px}
 @media(max-width:700px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-card:first-child{grid-column:auto;height:185px}.gallery-overlay strong{font-size:14px}.gallery-overlay small{font-size:12px}}
+
+/* Zoom cinematográfico ao passar o mouse sobre a imagem da home. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hero-image { transform: scale(1); transform-origin: 60% 55%; transition: transform 1.8s ease-out; }
+  .hero:hover .hero-image { transform: scale(1.12); transition-duration: 6s; transition-timing-function: cubic-bezier(.2,.45,.3,1); }
+}
