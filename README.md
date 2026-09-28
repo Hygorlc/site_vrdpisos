@@ -14,7 +14,7 @@ Site institucional estático em português, com navegação responsiva, três se
 - WhatsApp informado pelo usuário: 5199017137, exibido como (51) 9901-7137 e aplicado sem acrescentar dígitos (link com prefixo do Brasil: 555199017137). Tem 10 dígitos com DDD; a necessidade de conferência foi sinalizada.
 - E-mail informado pelo usuário: vrdpisosindustriais@gmail.com, com link mailto na seção de contato e nos dados estruturados.
 - Serviços: catálogo inicial para validação (pisos de concreto, polimento/acabamento, recuperação). Sem números de obras, prazos, certificações, garantias ou abrangência de atendimento inventados.
-- Imagem do galpão gerada por IA para ilustração, com identificação na página. Galeria com 14 fotos e 2 vídeos das obras enviados pelo proprietário em 11/09/2026, com ampliação e reprodução em modal.
+- Imagem do galpão gerada por IA para ilustração, com identificação na página. Galeria com 14 fotos das obras enviadas pelo proprietário em 11/09/2026, com ampliação em modal.
 - Depoimentos: espaço reservado e identificado, sem avaliações fictícias.
 
 ## Contato
