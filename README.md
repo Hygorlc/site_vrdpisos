@@ -29,6 +29,6 @@ Antes de uma eventual publicação pública, confirmar o telefone, a lista de se
 
 ## Efeito da home
 
-Anel de partículas WebGL adaptado do componente Cursor Ring Field — Originkit fornecido pelo proprietário. `public/cursor-ring.js` mantém os shaders de ruído e o campo de partículas, usando a variante analítica sem dependências React. A paleta acompanha a identidade VRD. O anel segue o cursor no desktop; no celular, move-se sozinho para preservar a rolagem por toque.
+Anel de partículas WebGL do componente Cursor Ring Field — Originkit fornecido pelo proprietário, em `public/cursor-ring.js`. A versão usa a simulação original com duas texturas alternadas, conservando os shaders e parâmetros do anexo: densidade 300, tamanho 120, velocidade 6, câmera 160, raio 12, largura 9, força 50 e turbulência 100. Também mantém a pulsação, o deslocamento autônomo e a transição suave para acompanhar o cursor. Não há limitação adicional de quadros ou adaptação da trajetória no celular.
 
-A renderização limita resolução e quadros por segundo, recorta partículas fora da câmera e pausa fora da tela ou com a aba oculta. Há controle de pausa acessível e composição estática quando o sistema solicita movimento reduzido. Sem WebGL ou durante perda do contexto, permanece a imagem existente.
+A integração remove a dependência de React e mantém o controle de pausa, a interrupção fora da tela/aba oculta e uma composição estática para movimento reduzido. Navegadores sem suporte a texturas de simulação usam a alternativa analítica do próprio componente. Sem WebGL ou durante perda do contexto, permanece a imagem da home.
