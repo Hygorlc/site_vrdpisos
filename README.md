@@ -26,3 +26,9 @@ O formulário monta uma mensagem no navegador, permite revisão e abre o WhatsAp
 Criado para hospedagem restrita ao proprietário. A restrição de acesso é aplicada pela plataforma; meta robots e robots.txt também impedem indexação. Não alterar o acesso sem autorização expressa. Dados estruturados e Open Graph estão prontos; telefone provisório não integra o JSON-LD. Canonical e imagem social apontam para a URL privada atual.
 
 Antes de uma eventual publicação pública, confirmar o telefone, a lista de serviços, fotos e depoimentos reais e remover os avisos de revisão; atualizar domínio/canonical e diretivas de indexação conforme aprovação do proprietário.
+
+## Efeito da home
+
+Anel de partículas WebGL adaptado do componente Cursor Ring Field — Originkit fornecido pelo proprietário. `public/cursor-ring.js` mantém os shaders de ruído e o campo de partículas, usando a variante analítica sem dependências React. A paleta acompanha a identidade VRD. O anel segue o cursor no desktop; no celular, move-se sozinho para preservar a rolagem por toque.
+
+A renderização limita resolução e quadros por segundo, recorta partículas fora da câmera e pausa fora da tela ou com a aba oculta. Há controle de pausa acessível e composição estática quando o sistema solicita movimento reduzido. Sem WebGL ou durante perda do contexto, permanece a imagem existente.

@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"VRD Pisos Industriais LTDA","url":"https://vrd-pisos-industriais.hygorlc92.chatgpt.site/","logo":"https://vrd-pisos-industriais.hygorlc92.chatgpt.site/assets/vrd-logo.webp","address":{"@type":"PostalAddress","streetAddress":"Rua Moacyr Domingues, 22 — São José","addressLocality":"Canoas","addressRegion":"RS","addressCountry":"BR"},"sameAs":["https://www.instagram.com/vrd.pisosindustriais/"],"email":"vrdpisosindustriais@gmail.com"}</script>
   <script src="/app.js" defer></script>
+  <script src="/cursor-ring.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -37,6 +38,7 @@
     <section id="inicio" aria-labelledby="hero-heading">
       <div class="hero">
         <img class="hero-image" src="/assets/industrial-reference.webp" alt="Referência ilustrativa de galpão com piso de concreto polido; imagem gerada por IA" width="1536" height="1024" fetchpriority="high">
+        <canvas class="hero-particles" aria-hidden="true"></canvas>
         <div class="hero-shade"></div>
         <div class="container hero-content">
           <div class="eyebrow light"><span class="short-line"></span> SOLUÇÕES EM PISOS INDUSTRIAIS</div>
@@ -45,6 +47,7 @@
           <div class="hero-actions"><a class="button button-white" href="#contato"><span class="wa-icon" aria-hidden="true">◉</span> Vamos falar da sua obra <span aria-hidden="true">↗</span></a><a class="text-link light" href="#servicos">Conheça as soluções <span aria-hidden="true">↓</span></a></div>
           <div class="hero-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Canoas, Rio Grande do Sul</div>
         </div>
+        <button class="hero-motion-toggle" type="button" aria-label="Pausar animação de partículas" aria-pressed="false" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path class="pause-symbol" d="M5 3v10M11 3v10"/><path class="play-symbol" d="m5 3 7 5-7 5Z"/></svg><span>Pausar efeito</span></button>
         <span class="image-disclosure">Imagem ilustrativa gerada por IA</span>
         <div class="hero-corner" aria-hidden="true">VRD <span>01 / 03</span></div>
       </div>

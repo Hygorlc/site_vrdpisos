@@ -5,6 +5,6 @@
   "description": "Site institucional privado da VRD Pisos Industriais",
   "scripts": {
     "dev": "node server.cjs",
-    "build": "node --check public/app.js && node build.cjs"
+    "build": "node --check public/app.js && node --check public/cursor-ring.js && node build.cjs"
   }
 }
