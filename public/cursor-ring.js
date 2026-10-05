@@ -671,16 +671,19 @@ void main(){
         };
         let follow = 0;
         const onMove = (e)=>{
-            if (reducedMotion.matches || userPaused) return;
+            if (userPaused) return;
             const r = canvas.getBoundingClientRect();
             pointer.x = (e.clientX - r.left) / Math.max(r.width, 1) * 2 - 1;
             pointer.y = -((e.clientY - r.top) / Math.max(r.height, 1) * 2 - 1);
             pointer.over = pointer.x >= -1 && pointer.x <= 1 && pointer.y >= -1 && pointer.y <= 1;
+            if (shouldAnimate() && !raf) raf = requestAnimationFrame(tick);
         };
         const onLeave = ()=>{
             pointer.over = false;
+            if (reducedMotion.matches) stop();
         };
-        window.addEventListener("pointermove", onMove);
+        host.addEventListener("pointermove", onMove);
+        host.addEventListener("pointerenter", onMove);
         host.addEventListener("pointerleave", onLeave);
         let raf = 0;
         let last = 0;
@@ -791,7 +794,7 @@ void main(){
             gl.drawArrays(gl.POINTS, 0, count);
         };
         function shouldAnimate() {
-            return inView && pageActive && !document.hidden && !userPaused && !reducedMotion.matches;
+            return inView && pageActive && !document.hidden && !userPaused && (!reducedMotion.matches || pointer.over);
         }
         function stop() {
             cancelAnimationFrame(raf);
@@ -806,7 +809,7 @@ void main(){
         }
         function syncMotion() {
             stop();
-            toggle.hidden = reducedMotion.matches;
+            toggle.hidden = false;
             toggle.setAttribute('aria-pressed', String(userPaused));
             toggle.setAttribute('aria-label', userPaused ? 'Retomar animação de partículas' : 'Pausar animação de partículas');
             toggle.querySelector('span').textContent = userPaused ? 'Retomar efeito' : 'Pausar efeito';
@@ -850,7 +853,8 @@ void main(){
             window.removeEventListener('pagehide', onHide);
             window.removeEventListener('pageshow', onShow);
             ro.disconnect();
-            window.removeEventListener("pointermove", onMove);
+            host.removeEventListener("pointermove", onMove);
+            host.removeEventListener("pointerenter", onMove);
             host.removeEventListener("pointerleave", onLeave);
             disposeField();
             gl.deleteBuffer(quad);
