@@ -4,11 +4,11 @@ Site institucional estático em português para https://vdrpisosindustriais.com.
 
 ## Hospedagem e uso
 
-Esta cópia do repositório é publicada pela Hostinger no domínio próprio. O projeto original no Sites permanece separado; não alterar o acesso ou a publicação desse projeto ao trabalhar nesta cópia.
+A versão pública em https://vdrpisosindustriais.com.br/ foi confirmada em 20/10/2026 com resposta HTTP 200 e cabeçalho `server: Netlify`. A atualização da branch `main` chegou ao domínio público. Também há um site ligado a este repositório no painel da Hostinger, que informa que o domínio não está conectado àquela hospedagem. O projeto original no Sites permanece separado.
 
 `npm run dev` inicia o servidor local em 3000. `npm run build` verifica a sintaxe do JavaScript e copia `public` para `out`.
 
-Na Hostinger, confira o diretório servido: os arquivos públicos ficam em `public/` no repositório e em `out/` após o build. O `index.html`, `robots.txt`, `sitemap.xml` e os demais arquivos públicos precisam estar na raiz servida do domínio. A implantação do Git é gerenciada pelo painel da hospedagem.
+Os arquivos públicos ficam em `public/` no repositório e em `out/` após o build. O `index.html`, `robots.txt`, `sitemap.xml` e os demais arquivos públicos precisam estar na raiz servida do domínio. Antes de alterar uma implantação ou o DNS, confira qual ambiente atende o endereço público; a existência do site no painel da Hostinger não confirma que o domínio esteja usando essa hospedagem.
 
 ## Informações confirmadas pelo responsável em 20/10/2026
 
