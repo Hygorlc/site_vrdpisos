@@ -1,34 +1,38 @@
 # VRD Pisos Industriais
 
-Site institucional estático em português, com navegação responsiva, três seções principais, abas de serviço acessíveis por teclado, galeria em modal, formulário que prepara mensagem para WhatsApp, mapa carregado sob demanda, perguntas frequentes e aviso de privacidade. Sem dependências de produção.
+Site institucional estático em português para https://vdrpisosindustriais.com.br/, com serviços, galeria, formulário de orçamento para WhatsApp e mapa carregado sob demanda. Sem dependências de produção.
 
-## Uso
+## Hospedagem e uso
 
-`npm run dev` inicia em 3000. `npm run build` verifica a sintaxe do JavaScript. O build copia `public` para `out`, o diretório publicado.
+Esta cópia do repositório é publicada pela Hostinger no domínio próprio. O projeto original no Sites permanece separado; não alterar o acesso ou a publicação desse projeto ao trabalhar nesta cópia.
 
-## Conteúdo e origem
+`npm run dev` inicia o servidor local em 3000. `npm run build` verifica a sintaxe do JavaScript e copia `public` para `out`.
 
-- Nome, CNPJ e endereço: contrato VRD recuperado dos materiais do usuário. Rua Moacyr Domingues, 22, São José, Canoas/RS, CNPJ 54.888.864/0001-10. Não foram incluídos valores contratuais ou dados da prestadora.
-- Logo: Logotipo VRD Pisos Industriais 3D.png, encontrado nos materiais do usuário. A paleta foi ajustada ao azul com o magenta presente na marca.
-- Instagram: https://www.instagram.com/vrd.pisosindustriais/ informado pelo usuário no contexto.
-- WhatsApp informado pelo usuário: 5199017137, exibido como (51) 9901-7137 e aplicado sem acrescentar dígitos (link com prefixo do Brasil: 555199017137). Tem 10 dígitos com DDD; a necessidade de conferência foi sinalizada.
-- E-mail informado pelo usuário: vrdpisosindustriais@gmail.com, com link mailto na seção de contato e nos dados estruturados.
-- Serviços: catálogo inicial para validação (pisos de concreto, polimento/acabamento, recuperação). Sem números de obras, prazos, certificações, garantias ou abrangência de atendimento inventados.
-- Imagem do galpão gerada por IA para ilustração, com identificação na página. Galeria com 14 fotos das obras enviadas pelo proprietário em 11/09/2026, com ampliação em modal.
-- Depoimentos: espaço reservado e identificado, sem avaliações fictícias.
+Na Hostinger, confira o diretório servido: os arquivos públicos ficam em `public/` no repositório e em `out/` após o build. O `index.html`, `robots.txt`, `sitemap.xml` e os demais arquivos públicos precisam estar na raiz servida do domínio. A implantação do Git é gerenciada pelo painel da hospedagem.
 
-## Contato
+## Informações confirmadas pelo responsável em 20/10/2026
 
-O formulário monta uma mensagem no navegador, permite revisão e abre o WhatsApp do número configurado. Nenhum dado é salvo em servidor. Não há envio automático de mensagens, e-mail, CRM ou banco de dados. A área em m² aceita valores positivos. Para trocar o WhatsApp, atualizar `phone` em `public/app.js` e o link/texto em `public/index.html`.
+- Nome: VRD Pisos Industriais. Razão social e CNPJ já presentes: VRD Pisos Industriais LTDA, 54.888.864/0001-10.
+- Telefone e WhatsApp: (51) 99340-3692; URL https://wa.me/5551993403692.
+- E-mail: vrdpisosindustriais@gmail.com.
+- Atendimento de segunda a sexta, das 07h às 18h, somente no local das obras; a sede não é apresentada como estabelecimento aberto a visitas.
+- Áreas atendidas: Canoas, Porto Alegre, Viamão, Esteio, São Leopoldo e Novo Hamburgo. Outras cidades sob consulta.
+- Serviços apresentados: execução de pisos de concreto, polimento e acabamento, recuperação de pisos. Não incluir garantias, certificações, números de obras ou outros serviços sem confirmação.
 
-## Privacidade e publicação
+## Conteúdo e imagens
 
-Criado para hospedagem restrita ao proprietário. A restrição de acesso é aplicada pela plataforma; meta robots e robots.txt também impedem indexação. Não alterar o acesso sem autorização expressa. Dados estruturados e Open Graph estão prontos; telefone provisório não integra o JSON-LD. Canonical e imagem social apontam para a URL privada atual.
+O logotipo e as 14 fotos da galeria já faziam parte dos materiais do projeto. A imagem de galpão usada na abertura é ilustrativa e gerada por IA, com indicação na página. Não criar depoimentos ou avaliações fictícias. Um arquivo de vídeo enviado para avaliação não foi publicado nesta alteração.
 
-Antes de uma eventual publicação pública, confirmar o telefone, a lista de serviços, fotos e depoimentos reais e remover os avisos de revisão; atualizar domínio/canonical e diretivas de indexação conforme aprovação do proprietário.
+## Contato e privacidade
 
-## Efeito da home
+O formulário prepara e permite revisar uma mensagem no navegador antes de abrir o WhatsApp; nenhum dado é salvo em servidor e nenhuma mensagem é enviada automaticamente. O visitante confirma o envio no WhatsApp. O mapa só é carregado quando solicitado. Não foram adicionadas ferramentas de publicidade ou análise.
 
-Anel de partículas WebGL do componente Cursor Ring Field — Originkit fornecido pelo proprietário, em `public/cursor-ring.js`. A versão usa a simulação original com duas texturas alternadas, conservando os shaders e parâmetros do anexo: densidade 300, tamanho 120, velocidade 6, câmera 160, raio 12, largura 9, força 50 e turbulência 100. Também mantém a pulsação, o deslocamento autônomo e a transição suave para acompanhar o cursor. Não há limitação adicional de quadros ou adaptação da trajetória no celular.
+## Presença nas buscas
 
-A integração remove a dependência de React e mantém o controle de pausa, a interrupção fora da tela/aba oculta e uma composição estática sem interação para movimento reduzido. Ao entrar ou mover o mouse sobre a imagem da home, a simulação acompanha o cursor também com essa preferência ativa, conforme solicitado pelo proprietário. O botão de pausa permanece disponível. Navegadores sem suporte a texturas de simulação usam a alternativa analítica do próprio componente. Sem WebGL ou durante perda do contexto, permanece a imagem da home.
+O site público permite rastreamento e indexação. O canonical, Open Graph e os dados estruturados usam o domínio próprio. `robots.txt` informa o sitemap, que contém a página inicial. Não reintroduzir `noindex` no HTML, nos cabeçalhos HTTP ou no servidor do site público. Indexação e posição nas buscas dependem do processamento pelo Google.
+
+O Perfil da Empresa foi criado na conta empresarial e aguarda a verificação por vídeo pelo responsável. Não confundir a verificação do perfil com a verificação de propriedade do site no Search Console.
+
+## Efeito da abertura
+
+O anel de partículas em `public/cursor-ring.js` foi preservado. Mantenha o controle de pausa e os comportamentos de acessibilidade existentes ao editar o visual.

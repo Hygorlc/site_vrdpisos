@@ -2,7 +2,7 @@
   "name": "vrd-pisos-industriais",
   "version": "1.0.0",
   "private": true,
-  "description": "Site institucional privado da VRD Pisos Industriais",
+  "description": "Site institucional da VRD Pisos Industriais em Canoas, RS",
   "scripts": {
     "dev": "node server.cjs",
     "build": "node --check public/app.js && node --check public/cursor-ring.js && node build.cjs"

@@ -1,7 +1,7 @@
 'use strict';
 const $ = (selector, scope = document) => scope.querySelector(selector);
 const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
-const phone = '555199017137';
+const phone = '5551993403692';
 const menuButton = $('.menu-toggle');
 const navigation = $('#navigation');
 function closeMenu() { menuButton.setAttribute('aria-expanded', 'false'); navigation.classList.remove('open'); menuButton.setAttribute('aria-label', 'Abrir menu'); }
@@ -34,6 +34,7 @@ $('#quote-form').addEventListener('submit', event => { event.preventDefault(); c
 ['name', 'city'].forEach(id => $('#' + id).addEventListener('input', event => event.currentTarget.setCustomValidity('')));
 ['privacy-button', 'footer-privacy'].forEach(id => $('#' + id).addEventListener('click', () => $('#privacy-dialog').showModal()));
 
-$('#load-map').addEventListener('click', () => { const frame = document.createElement('iframe'); frame.title = 'Localização da VRD Pisos Industriais em Canoas'; frame.src = 'https://www.google.com/maps?q=' + encodeURIComponent('Rua Moacyr Domingues 22 São José Canoas RS') + '&output=embed'; frame.referrerPolicy = 'no-referrer-when-downgrade'; frame.loading = 'eager'; frame.allowFullscreen = true; const fallback = document.createElement('a'); fallback.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Rua Moacyr Domingues 22 São José Canoas RS'); fallback.target = '_blank'; fallback.rel = 'noopener noreferrer'; fallback.className = 'map-fallback'; fallback.textContent = 'Abrir mapa em nova aba ↗'; $('#map-shell').replaceChildren(frame, fallback); });
+$('#load-map').addEventListener('click', () => { const frame = document.createElement('iframe'); frame.title = 'Canoas, base de atendimento da VRD Pisos Industriais'; frame.src = 'https://www.google.com/maps?q=' + encodeURIComponent('Canoas RS') + '&output=embed'; frame.referrerPolicy = 'no-referrer-when-downgrade'; frame.loading = 'eager'; frame.allowFullscreen = true; const fallback = document.createElement('a'); fallback.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Canoas RS'); fallback.target = '_blank'; fallback.rel = 'noopener noreferrer'; fallback.className = 'map-fallback'; fallback.textContent = 'Abrir mapa em nova aba ↗'; $('#map-shell').replaceChildren(frame, fallback); });
 $('#year').textContent = new Date().getFullYear();
 if ('IntersectionObserver' in window) { const anchors = ['empresa', 'servicos', 'galeria', 'contato']; const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { $$('#navigation a').forEach(a => { const active = a.hash === '#' + entry.target.id; a.classList.toggle('active', active); if (active) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); }); } }); }, { rootMargin: '-15% 0px -60% 0px', threshold: 0 }); anchors.forEach(id => observer.observe($('#' + id))); }
+
